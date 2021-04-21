@@ -21,7 +21,7 @@ const App = () => {
     if (_token) {
       dispatch({
         type: "SET_TOKEN",
-        token: _token,-
+        token: _token,
       });
 
       spotify.setAccessToken(_token);
@@ -34,7 +34,7 @@ const App = () => {
     }
   }, []);
 
-  console.log(user, "thisis");
+
 
   return <div className="app">{token ? <Player /> : <Login />}</div>;
 };
