@@ -1,5 +1,5 @@
 export const authEndpoint = "https://accounts.spotify.com/authorize";
-const redirectUri = "http://localhost:3000/";
+const redirectUri = "https://shreyam1008.github.io/spotty/";
 const clientId = "c4393b0f3956473480dd0371a6f2e5de";
 
 const scopes = [
@@ -17,6 +17,8 @@ export const getTokenFromUrl = () => {
     .reduce((initial, item) => {
       var parts = item.split("=");
       initial[parts[0]] = decodeURIComponent(parts[1]);
+
+      console.log(initial);
 
       return initial;
     }, {});
